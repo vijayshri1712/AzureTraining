@@ -1,0 +1,9 @@
+{
+	"name": "azure-datafactory-rg-training",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1e33ecd3-b2d6-45e1-90ab-f7727dd79d96",
+		"tenantId": "a7554384-e96f-49a8-926b-a50ea6c09b00"
+	}
+}
