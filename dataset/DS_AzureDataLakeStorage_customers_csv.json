@@ -5,6 +5,9 @@
 			"referenceName": "LS_AzureDataLakeStorage_vijayshri123",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "StorageAccount/azurestoragetraining"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
