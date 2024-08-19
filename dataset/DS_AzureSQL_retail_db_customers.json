@@ -1,5 +1,5 @@
 {
-	"name": "DS_AzureSQL_retaildb_users_tbl",
+	"name": "DS_AzureSQL_retail_db_customers",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_AzureSqlDatabase_retaildb",

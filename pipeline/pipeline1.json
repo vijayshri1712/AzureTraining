@@ -165,13 +165,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ADLS_vijayshri123",
+						"referenceName": "DS_AzureDataLakeStorage_customers_csv",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_AzureSQL_retaildb_users_tbl",
+						"referenceName": "DS_AzureSQL_retail_db_customers",
 						"type": "DatasetReference"
 					}
 				]

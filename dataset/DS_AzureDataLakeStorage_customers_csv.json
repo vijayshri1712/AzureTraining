@@ -1,5 +1,5 @@
 {
-	"name": "DS_ADLS_vijayshri123",
+	"name": "DS_AzureDataLakeStorage_customers_csv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_AzureDataLakeStorage_vijayshri123",
