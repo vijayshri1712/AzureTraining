@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT  * from dbo.users_2 where country = 'India'",
+						"sqlReaderQuery": "SELECT  top 5* from dbo.users_2 where country = 'India'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -47,12 +47,12 @@
 					},
 					"activities": [
 						{
-							"name": "Append variable2",
+							"name": "Append variable1",
 							"type": "AppendVariable",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "names",
+								"variableName": "filename",
 								"value": {
 									"value": "@item().name",
 									"type": "Expression"
@@ -65,16 +65,33 @@
 			{
 				"name": "Set variable1",
 				"type": "SetVariable",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Allfilenames",
+					"value": {
+						"value": "@variables('filename')",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"variables": {
-			"names": {
+			"Allfilenames": {
+				"type": "Array"
+			},
+			"filename": {
 				"type": "Array"
 			}
 		},
