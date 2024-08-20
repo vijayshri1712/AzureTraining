@@ -1,0 +1,26 @@
+{
+	"name": "DS_ADLS_CopyFilestoADLS_vijayshri123",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureDataLakeStorage_vijayshri123",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "StorageAccount/azurestoragetraining"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "users_1.csv",
+				"fileSystem": "retaildb"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
