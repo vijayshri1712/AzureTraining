@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT top 10 * from dbo.users_2 where country = 'India'",
+						"sqlReaderQuery": "SELECT  * from dbo.users_2 where country = 'India'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
