@@ -56,7 +56,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "users_2"
+			"table": "config"
 		}
 	}
 }
