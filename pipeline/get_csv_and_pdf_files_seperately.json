@@ -95,7 +95,7 @@
 				}
 			},
 			{
-				"name": "Set variable1",
+				"name": "Set All CSV Filenames",
 				"type": "SetVariable",
 				"dependsOn": [
 					{
@@ -119,7 +119,7 @@
 				}
 			},
 			{
-				"name": "Set variable2",
+				"name": "Set All Other Filenames",
 				"type": "SetVariable",
 				"dependsOn": [
 					{
