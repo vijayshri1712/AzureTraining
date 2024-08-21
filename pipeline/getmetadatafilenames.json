@@ -99,7 +99,7 @@
 			}
 		},
 		"folder": {
-			"name": "Pipeline Activities/Data Movement Activities/Lookup"
+			"name": "Pipeline Activities/Data Movement Activities/GetMetaData"
 		},
 		"annotations": []
 	}
