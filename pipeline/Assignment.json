@@ -45,6 +45,7 @@
 						"value": "@activity('Lookup1').output.value",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Copy data2",
@@ -60,10 +61,20 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "AzureSqlSource",
-									"sqlReaderQuery": "SELECt * from dbo.config",
-									"queryTimeout": "02:00:00",
-									"partitionOption": "None"
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"wildcardFolderPath": "customers.csv",
+										"wildcardFileName": {
+											"value": "@item().files_to_copy",
+											"type": "Expression"
+										},
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
 								},
 								"sink": {
 									"type": "DelimitedTextSink",
@@ -88,7 +99,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DS_AzureSQL_retail_db_customers",
+									"referenceName": "DS_ADLS_Assignment_tocopyfiles",
 									"type": "DatasetReference"
 								}
 							],
@@ -100,30 +111,6 @@
 							]
 						}
 					]
-				}
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "ForEach1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "Alldatafile",
-					"value": {
-						"value": "@variables('filename')",
-						"type": "Expression"
-					}
 				}
 			}
 		],
