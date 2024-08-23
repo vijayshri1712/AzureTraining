@@ -1,0 +1,39 @@
+{
+	"name": "DS_ADLS_customerjson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureDataLakeStorage_vijayshri123",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "users.json",
+				"folderPath": "customers-json",
+				"fileSystem": "retaildb"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"age": {
+					"type": "integer"
+				},
+				"gender": {
+					"type": "string"
+				},
+				"designation": {
+					"type": "string"
+				},
+				"salary": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+}
