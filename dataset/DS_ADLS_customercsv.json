@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "users.txt",
 				"folderPath": "customers-csv",
 				"fileSystem": "retaildb"
 			},
