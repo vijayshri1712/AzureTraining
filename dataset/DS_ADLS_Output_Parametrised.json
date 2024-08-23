@@ -19,6 +19,10 @@
 					"value": "@dataset().Folderpath",
 					"type": "Expression"
 				},
+				"folderPath": {
+					"value": "@dataset().Folderpath",
+					"type": "Expression"
+				},
 				"fileSystem": "output"
 			},
 			"columnDelimiter": ",",
