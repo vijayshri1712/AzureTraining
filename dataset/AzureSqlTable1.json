@@ -16,10 +16,6 @@
 				"type": "int",
 				"precision": 10
 			}
-		],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": "inactive_customers"
-		}
+		]
 	}
 }
