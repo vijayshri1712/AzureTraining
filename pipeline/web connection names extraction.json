@@ -62,16 +62,39 @@
 					},
 					"activities": [
 						{
-							"name": "Append variable1",
-							"type": "AppendVariable",
+							"name": "Stored procedure1",
+							"type": "SqlServerStoredProcedure",
 							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "Finalname",
-								"value": {
-									"value": "@item().name",
-									"type": "Expression"
+								"storedProcedureName": "[dbo].[Insert_Into_users_data_SP]",
+								"storedProcedureParameters": {
+									"Email": {
+										"value": {
+											"value": "@string(item().email)",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"NAME": {
+										"value": {
+											"value": "@string(item().name)",
+											"type": "Expression"
+										},
+										"type": "String"
+									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "LS_AzureSqlDatabase_retaildb",
+								"type": "LinkedServiceReference"
 							}
 						}
 					]
